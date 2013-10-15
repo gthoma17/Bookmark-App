@@ -1,31 +1,23 @@
 {
-	"name": "Class A",
-	"description": "!!!Generic Description!!!",
-	"version": "1.3",
-	"manifest_version": 2,
-	"icons": {
-		"128": "128.png"
-	},
-	"content_scripts":[
+  "manifest_version": 2,
+
+  "name": "Bookmark",
+  "description": "Bookmark App",
+  "version": "1.0",
+  "content_scripts":[
 		{
-			"matches": ["!!!MYWEBADDRESS!!!/*"],
+			"matches": ["!!!MYURL!!!*"],
 			"js": ["content_script.js"],
 			"run_at": "document_end"
 		}
 	],
-	"app": {
-		"urls": [
-			"!!!MYWEBADDRESS!!!"
-		],
-		"launch": {
-			"container": "panel",
-			"height": 768,
-			"width": 1366,
-			"web_url": "!!!MYWEBADDRESS!!!"
-		}
-	},
-	"permissions": [
-		"unlimitedStorage",
-		"notifications"
-		]
+  "permissions": [
+    "tabs", 
+    "http://*/*", 
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_icon": "128.png",
+    "default_popup": "popup.html"
+  }
 }

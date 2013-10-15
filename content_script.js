@@ -1,1 +1,1 @@
-//!!!Content scripts go here
+// !!!MY JS GOES HERE!!!
